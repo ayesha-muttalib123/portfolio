@@ -17,7 +17,7 @@ function About() {
         <div className='max-w-3xl text-center text-white p-8'>
           <h1 className='text-5xl font-bold mb-6 tracking-wide font-serif'>About Me</h1>
           <p className='text-lg mb-6 leading-relaxed'>
-            Hi! I’m Ayesha Muttalib, a passionate web developer with a keen interest in creating dynamic and responsive web applications. 
+            Hi! I am Ayesha Muttalib, a passionate web developer with a keen interest in creating dynamic and responsive web applications. 
             With experience in both frontend and backend technologies, I enjoy bringing ideas to life through code.
           </p>
           <h2 className='text-3xl font-semibold mb-4 font-mono'>My Skills</h2>
@@ -34,8 +34,8 @@ function About() {
           </ol>
    
           <p className='mt-8 text-lg'>
-            I believe in the power of technology to solve real-world problems, and I'm always eager to learn new tools 
-            and techniques to enhance my skills. Let’s connect and create something amazing together!
+            I believe in the power of technology to solve real-world problems, and I am always eager to learn new tools 
+            and techniques to enhance my skills. Lets connect and create something amazing together!
           </p>
         </div>
       </div>

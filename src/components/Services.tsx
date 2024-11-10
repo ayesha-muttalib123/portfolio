@@ -64,10 +64,15 @@ const ListOfServices: ServiceType[] = [
 const Services: React.FC = () => {
   return (
     <div className="p-6 h-vh">
-      <h1 className="text-4xl font-bold text-center text-whitebg-gray-400 font-serif mb-7">My Services</h1>
+      <h1 className="text-4xl font-bold text-center text-white bg-gray-400 font-serif mb-7">
+        My Services
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 m-4 mb-5">
         {ListOfServices.map((service, index) => (
-          <div key={index} className="bg-white  text-2xl m-4 shadow-lg rounded-lg p-5 transition-transform hover:scale-105">
+          <div 
+            key={index} // Prefer using a unique id, otherwise fall back to index
+            className="bg-white text-2xl m-4 shadow-lg rounded-lg p-5 transition-transform hover:scale-105"
+          >
             <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-700 mb-4">{service.desc}</p>
             <div className="flex flex-wrap gap-2 text-lg text-gray-500">
@@ -81,5 +86,6 @@ const Services: React.FC = () => {
     </div>
   );
 };
+
 
 export default Services;

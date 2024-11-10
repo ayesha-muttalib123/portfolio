@@ -77,8 +77,9 @@ const Projects: React.FC = () => {
             <div className="relative w-full h-48">
   <Image
     className="object-cover"
-    src={project.img}
+    src={`/${project.img}`}
     alt={project.title}
+  
     layout="fill" // This makes the image fill the container
   />
 </div>

@@ -50,7 +50,7 @@ function Hero() {
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 2}} 
     >
-  Hi, I am Ayesha Muttalib – A Full Stack Developer.
+  Hi, I am Ayesha Muttalib A Full Stack Developer.
   I specialize in creating dynamic and scalable web applications using Node.js, Express, React, and MongoDB. I am passionate about delivering seamless and efficient digital experiences.
   Lets connect and explore how we can collaborate to bring innovative ideas to life!
     </motion.h1>
