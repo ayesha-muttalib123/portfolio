@@ -1,9 +1,8 @@
-import Navbar from '@/components/Navbar';
-import { a } from 'framer-motion/client';
+
 import React from 'react';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTailwindcss, SiJavascript, SiMongodb, SiHtml5, SiCss3, SiNextdotjs } from 'react-icons/si';
-
+import Image from 'next/image';
 interface PropType {
   title: string;
   desc: string;
@@ -75,7 +74,14 @@ const Projects: React.FC = () => {
         {ListOfProject.map((project, index) => (
           <a key={index} href="">
             <div className="bg-white m-4 shadow-lg rounded-lg overflow-hidden transition-transform hover:scale-105">
-              <img className="w-full h-48 object-cover" src={project.img} alt={project.title} />
+            <div className="relative w-full h-48">
+  <Image
+    className="object-cover"
+    src={project.img}
+    alt={project.title}
+    layout="fill" // This makes the image fill the container
+  />
+</div>
               <div className="p-5">
                 <h2 className="text-xl font-semibold mb-2 text-gray-500">{project.title}</h2>
                 <p className="text-gray-700 mb-4">{project.desc}</p>

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Services from '@/components/Services';
 import { GoArrowUpRight } from "react-icons/go";
+import Image from 'next/image';
 
 
 function Hero() {
@@ -20,7 +21,15 @@ function Hero() {
     <div className='flex flex-col h-screen sm:m-2'>
       <div className='w-full p-7 flex justify-between items-center'>
         <div className='flex flex-col items-center'>
-          <img src="image1.jpg" className='h-10 w-10' alt="" />
+        <div className="relative h-10 w-10">
+  <Image
+    src="/image1.jpg"
+    alt="Description of the image"
+    layout="fill"
+    className="object-cover"
+  />
+</div>
+
           <p>Ayesha Muttalib</p>
         </div>
         <Navbar />
@@ -41,10 +50,9 @@ function Hero() {
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 2}} 
     >
-      Hi, I'm Ayesha Muttalib –A Full Stack Developer. 
-      I specialize in creating dynamic web applications with Node.js, Express, React, and MongoDB. 
-      I’m passionate about solving complex problems and delivering seamless digital experiences. 
-      Let's connect and explore how we can collaborate!
+  Hi, I am Ayesha Muttalib – A Full Stack Developer.
+  I specialize in creating dynamic and scalable web applications using Node.js, Express, React, and MongoDB. I am passionate about delivering seamless and efficient digital experiences.
+  Lets connect and explore how we can collaborate to bring innovative ideas to life!
     </motion.h1>
     <motion.button
     

@@ -7,7 +7,7 @@ function ContactMe() {
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-md">
         <h2 className="text-center text-3xl font-extrabold text-gray-900">Contact Me</h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          I’d love to hear from you! You can reach out via any of the following:
+          I would love to hear from you! You can reach out via any of the following:
         </p>
        
         <div className="flex justify-around mt-6">
