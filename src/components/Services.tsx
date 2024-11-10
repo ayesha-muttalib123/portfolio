@@ -13,50 +13,50 @@ const ListOfServices: ServiceType[] = [
     title: "React Development",
     desc: "Building interactive and dynamic user interfaces with React for seamless, modern web experiences.",
     icons: [
-      <FaReact className="text-blue-500" />,
-      <SiJavascript className="text-yellow-500" />,
+      <FaReact className="text-blue-500" key="FaReact" />,
+      <SiJavascript className="text-yellow-500" key="SiJavascript" />,
     ],
   },
   {
     title: "Node.js API Development",
     desc: "Developing fast and secure RESTful APIs using Node.js and Express to handle business logic and data flow.",
     icons: [
-      <FaNodeJs className="text-green-500" />,
-      <SiExpress className="text-gray-600" />,
+      <FaNodeJs className="text-green-500" key="FaNodeJs" />,
+      <SiExpress className="text-gray-600" key="SiExpress" />,
     ],
   },
   {
     title: "Full-Stack (MERN) Development",
     desc: "Building complete web applications using the MERN stack (MongoDB, Express, React, Node.js) for powerful, scalable solutions.",
     icons: [
-      <FaReact className="text-blue-500" />,
-      <FaNodeJs className="text-green-500" />,
-      <SiExpress className="text-gray-600" />,
-      <SiMongodb className="text-green-600" />,
+      <FaReact className="text-blue-500" key="FaReact-MERN" />,
+      <FaNodeJs className="text-green-500" key="FaNodeJs-MERN" />,
+      <SiExpress className="text-gray-600" key="SiExpress-MERN" />,
+      <SiMongodb className="text-green-600" key="SiMongodb" />,
     ],
   },
   {
     title: "Next.js Development",
     desc: "Leveraging Next.js for server-side rendering, static site generation, and optimized performance for React applications.",
     icons: [
-      <SiNextdotjs className="text-black" />,
-      <SiJavascript className="text-yellow-500" />,
+      <SiNextdotjs className="text-black" key="SiNextdotjs" />,
+      <SiJavascript className="text-yellow-500" key="SiJavascript-Nextjs" />,
     ],
   },
   {
     title: "HTML & CSS Development",
     desc: "Creating semantic, accessible, and responsive web pages with HTML5 and CSS3, ensuring high-quality front-end design.",
     icons: [
-      <SiHtml5 className="text-orange-500" />,
-      <SiCss3 className="text-blue-400" />,
+      <SiHtml5 className="text-orange-500" key="SiHtml5" />,
+      <SiCss3 className="text-blue-400" key="SiCss3" />,
     ],
   },
   {
     title: "Responsive Design with Tailwind CSS",
     desc: "Implementing fully responsive, mobile-first designs with Tailwind CSS for a smooth and adaptive user interface.",
     icons: [
-      <SiTailwindcss className="text-teal-500" />,
-      <SiCss3 className="text-blue-400" />,
+      <SiTailwindcss className="text-teal-500" key="SiTailwindcss" />,
+      <SiCss3 className="text-blue-400" key="SiCss3-Tailwind" />,
     ],
   },
 ];
@@ -70,14 +70,14 @@ const Services: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 m-4 mb-5">
         {ListOfServices.map((service, index) => (
           <div 
-            key={index} // Prefer using a unique id, otherwise fall back to index
+            key={index} // Prefer using a unique id if available, otherwise index is acceptable
             className="bg-white text-2xl m-4 shadow-lg rounded-lg p-5 transition-transform hover:scale-105"
           >
             <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-700 mb-4">{service.desc}</p>
             <div className="flex flex-wrap gap-2 text-lg text-gray-500">
-              {service.icons.map((icon, idx) => (
-                <span key={idx}>{icon}</span>
+              {service.icons.map((icon) => (
+                <span key={icon.key}>{icon}</span>
               ))}
             </div>
           </div>
@@ -86,6 +86,5 @@ const Services: React.FC = () => {
     </div>
   );
 };
-
 
 export default Services;
