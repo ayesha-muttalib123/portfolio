@@ -68,7 +68,7 @@ const ListOfProject: PropType[] = [
 const Projects: React.FC = () => {
   return (
     <div className="p-6 h-vh">
-      <img src="" alt="" />
+    
       <h1 className="text-4xl font-bold text-center text-white font-serif mb-7">My Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 m-4 mb-5">
         {ListOfProject.map((project, index) => (
@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
                 <div className="flex flex-wrap gap-2 text-sm text-gray-500">
 
                   {project.tags.map((tags)=>(
-                    <div className='flex gap-4'>  <span>{tags.icon}</span> <span>{tags.name}</span></div>
+                    <div key={tags.name} className='flex gap-4'>  <span>{tags.icon}</span> <span>{tags.name}</span></div>
                   ))}
                 </div>
               </div>
