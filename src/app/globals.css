@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'animate.css';
+
+
 @layer base{
     body{
         color: white;
@@ -9,3 +12,24 @@
     }
     
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+  .skill-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  

@@ -64,7 +64,7 @@ const ListOfServices: ServiceType[] = [
 const Services: React.FC = () => {
   return (
     <div className="p-6 h-vh">
-      <h1 className="text-4xl font-bold text-center text-white bg-gray-400 font-serif mb-7">
+      <h1 className="text-4xl font-bold text-center text-white mt-10 font-serif mb-7">
         My Services
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 m-4 mb-5">

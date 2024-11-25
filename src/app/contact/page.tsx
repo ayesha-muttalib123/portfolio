@@ -1,9 +1,11 @@
+import { div } from 'framer-motion/client';
 import React from 'react';
 import { FaLinkedin, FaEnvelope, FaPhone, FaGithub } from 'react-icons/fa'; // Importing icons
 
 function ContactMe() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-red-800 py-12 px-4 sm:px-6 lg:px-8">
+<div>
+<div className="min-h-screen flex items-center justify-center bg-red-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-md">
         <h2 className="text-center text-3xl font-extrabold text-gray-900">Contact Me</h2>
         <p className="mt-2 text-center text-sm text-gray-600">
@@ -93,8 +95,31 @@ function ContactMe() {
             </button>
           </div>
         </form>
+        
       </div>
+      
     </div>
+      <footer className="bg-gray-800 text-white py-8 sm:py-10 ">
+      <div className="container mx-auto px-6 text-center sm:text-left">
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-4">
+          <div className="text-xl font-bold">Ayesha Muttalib</div>
+          <div className="flex flex-wrap justify-center sm:justify-end space-x-6 mt-4 sm:mt-0">
+            <a href="https://github.com/ayesha-muttalib123" target="_blank" className="text-gray-300 hover:text-white transition-all">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ayesha-muttalib" target="_blank" className="text-gray-300 hover:text-white transition-all">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div className="border-t border-gray-600 pt-4">
+          <p className="text-sm">&copy; {new Date().getFullYear()} Ayesha Muttalib. All Rights Reserved.</p>
+          <p className="text-xs">Built with <span className="text-red-500">❤</span> using React, Next.js, and Tailwind CSS</p>
+        </div>
+      </div>
+    </footer>
+</div>
+    
   );
 }
 
