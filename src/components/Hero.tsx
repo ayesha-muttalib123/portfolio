@@ -8,6 +8,8 @@ import { GoArrowUpRight } from "react-icons/go";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from 'next/image';
 import Services from './Services';
+import Link from 'next/link';
+import ContactMe from '../app/contact/page';
 
 function Hero() {
   const router = useRouter();
@@ -39,7 +41,7 @@ function Hero() {
         </div>
 
         {/* Navbar for Large Screens */}
-        <div className="sm:flex hidden">
+        <div className="hidden sm:flex">
           <Navbar />
         </div>
 
@@ -48,6 +50,7 @@ function Hero() {
           <button
             onClick={toggleSidebar}
             className="text-white p-2 bg-transparent rounded-md border-2 border-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+            aria-label="Toggle Sidebar"
           >
             {isSidebarOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
           </button>
@@ -56,27 +59,41 @@ function Hero() {
 
       {/* Sidebar for Mobile Devices */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-gray-200 z-50 w-64 transition-all duration-300 ease-in-out ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full bg-gray-800 text-gray-200 z-50 w-64 transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="p-6">
-          <button onClick={toggleSidebar} className="text-white mb-6">
+          <button
+            onClick={toggleSidebar}
+            className="text-white mb-6"
+            aria-label="Close Sidebar"
+          >
             <AiOutlineClose size={30} />
           </button>
-          <div className="space-y-4">
-            {/* Sidebar Sections with Lines Between Them */}
-            <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
-              <a href="#home" className="text-xl font-medium">Home</a>
-            </div>
-            <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
-              <a href="#about" className="text-xl font-medium">About</a>
-            </div>
-            <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
-              <a href="#services" className="text-xl font-medium">Services</a>
-            </div>
-            <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
-              <a href="#contact" className="text-xl font-medium">Contact</a>
-            </div>
-          </div>
+          <nav className="space-y-4">
+          <Link href="/" onClick={toggleSidebar}>
+              <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
+                <span className="text-xl font-medium">Home</span>
+              </div>
+            </Link>
+            {/* Sidebar Links */}
+            <Link href="/about" onClick={toggleSidebar}>
+              <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
+                <span className="text-xl font-medium">About</span>
+              </div>
+            </Link>
+            <Link href="/contact" onClick={toggleSidebar}>
+              <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
+                <span className="text-xl font-medium">Contact Me</span>
+              </div>
+            </Link>
+            <Link href="/projects" onClick={toggleSidebar}>
+              <div className="sidebar-item border-b border-gray-500 hover:bg-gray-700 transition-all duration-300 p-4 rounded-md">
+                <span className="text-xl font-medium">Projects</span>
+              </div>
+            </Link>
+          </nav>
         </div>
       </div>
 
@@ -110,6 +127,7 @@ function Hero() {
             transition={{ duration: 2 }}
             onClick={handlePush}
             className="bg-red-800 mt-5 p-3 rounded-lg text-white flex items-center gap-2"
+            aria-label="Contact Me"
           >
             Contact Me <GoArrowUpRight size={20} />
           </motion.button>
@@ -117,7 +135,7 @@ function Hero() {
       </div>
 
       {/* Services Section */}
-   <Services/>
+      <Services />
 
       {/* Footer */}
       <footer className="bg-gray-800 text-gray-200 py-4 text-center mt-10">
