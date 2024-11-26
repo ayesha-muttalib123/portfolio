@@ -118,9 +118,9 @@ function Hero() {
             transition={{ duration: 2 }}
           >
           
-  Hi, I am Ayesha Muttalib, a Full Stack Developer.
-  I specialize in creating dynamic and scalable web applications using Node.js, Express, React, and MongoDB. I&apos;m passionate about delivering seamless and efficient digital experiences.
-  Let&apos;s connect and explore how we can collaborate to bring innovative ideas to life!
+      Hi, I am Ayesha Muttalib, a Developer specializing in creating APIs using Node.js, Express, and MongoDB.
+I am also passionate about front-end development using React, Next.js, HTML, CSS, and JavaScript.
+Let's connect and explore how we can collaborate to bring innovative ideas to life!
 </motion.h1>         
           <motion.button
             initial={{ opacity: 0, y: -20 }}
