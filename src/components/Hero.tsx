@@ -9,7 +9,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from 'next/image';
 import Services from './Services';
 import Link from 'next/link';
-import ContactMe from '../app/contact/page';
+
 
 function Hero() {
   const router = useRouter();
